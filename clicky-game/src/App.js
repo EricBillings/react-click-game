@@ -12,6 +12,13 @@ class App extends React.Component {
 };
 
 
+removeImage = id => {
+const newImages = images.filter(image => image.id === !id)
+
+this.setState({images: newImages});
+
+};
+
 
 
 
@@ -24,6 +31,7 @@ render () {
         key={image.id}
         name={image.name}
         image={image.image}
+        removeImage={this.removeImage}
 
       />
       ))}

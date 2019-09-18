@@ -8,6 +8,7 @@ function Image (props) {
         key={props.key}
         src={props.image}
         alt={props.name}
+        onClick={() => {props.removeImage(props.key)}}
 
         
         
