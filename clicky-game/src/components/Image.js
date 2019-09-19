@@ -3,9 +3,6 @@ import React from "react"
 const imageStyle = {
     margin: "10px",
     display: "inline-block"
-
-
-
 }
 
 
