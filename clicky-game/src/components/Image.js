@@ -9,7 +9,7 @@ function Image (props) {
         id={props.id}
         src={props.image}
         alt={props.name}
-        onClick={() => {props.removeImage(props.id)}}
+        onClick={() => {props.countImage(props.id)}}
 
         
         
