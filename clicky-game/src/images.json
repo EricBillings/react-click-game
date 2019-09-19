@@ -2,37 +2,37 @@
     {
     "id": 1,
     "name": "image1",
-    "image": "https://via.placeholder.com/300.png/708/fff"
+    "image": "https://via.placeholder.com/200.png/708/fff"
     },
     {
     "id": 2,
     "name": "image2",
-    "image": "https://via.placeholder.com/300.png/2f2/ggg"
+    "image": "https://via.placeholder.com/200.png/2f2/ggg"
     },
     {
     "id": 3,
     "name": "image3",
-    "image": "https://via.placeholder.com/300.png/f3f/fff"
+    "image": "https://via.placeholder.com/200.png/f3f/fff"
     },
     {
     "id": 4,
     "name": "image4",
-    "image": "https://via.placeholder.com/300.png/g3g/fff"
+    "image": "https://via.placeholder.com/200.png/g3g/fff"
     },
     {
     "id": 5,
     "name": "image5",
-    "image": "https://via.placeholder.com/300.png/mmm/fff"
+    "image": "https://via.placeholder.com/200.png/mmm/fff"
     },
     {
     "id": 6,
     "name": "image6",
-    "image": "https://via.placeholder.com/300.png/9e9/fff"
+    "image": "https://via.placeholder.com/200.png/9e9/fff"
     },
     {
     "id": 7,
     "name": "image7",
-    "image": "https://via.placeholder.com/300.png/09f/fff"
+    "image": "https://via.placeholder.com/200.png/09f/fff"
     }
     
         

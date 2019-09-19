@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Image from "./components/Image";
 import images from "./images.json"
 
+
 // From Stack Overflow //
 function shuffle(array) {
   let counter = array.length;
@@ -26,12 +27,14 @@ class App extends React.Component {
     guesses: [],
     gameScore: 0,
     topScore: 0,
-    guessVerdict: "Click an Image to Start"
+    guessVerdict: "Click an Image to Start",
+    playingOrNot: "Click on an Image to Score Points. If you Click on All of the Images Once, You Win. If you Click on any Image more than Once, You Lose"
 };
 
 
 
 countImage = id => {
+this.setState({playingOrNot: ""})
 this.state.guesses.push(id);
 const checkSet = [...new Set(this.state.guesses)];
 if (checkSet.length === this.state.images.length) {
@@ -67,6 +70,7 @@ if (checkSet.length === this.state.images.length) {
 
 
 
+
 const newImages = this.state.images;
 shuffle(newImages);
 this.setState({images: newImages});
@@ -77,13 +81,26 @@ this.setState({images: newImages});
 
 
 render () {
-  return (
-    <Wrapper>
-      <Header />
-      <h3>{this.state.guessVerdict}</h3>
-      <h3>Game Score: {this.state.gameScore}</h3>
-      <h3>Top Score: {this.state.topScore}</h3>
 
+  const imageGalleryStyle = {
+    "margin": "10px",
+    "text-align": "center"
+
+  };
+
+
+  return (
+  
+    <Wrapper className="Container">
+      <Header 
+      guessVerdict={this.state.guessVerdict}
+      gameScore={this.state.gameScore}
+      topScore={this.state.topScore}
+      playingOrNot={this.state.playingOrNot}
+      />
+
+
+      <div style={imageGalleryStyle}>
       {this.state.images.map(image => (
       <Image  
         key={image.id}
@@ -91,9 +108,9 @@ render () {
         name={image.name}
         image={image.image}
         countImage={() => {this.countImage(image.id)}}
-
       />
       ))}
+      </div>
     </Wrapper>
 
   );
