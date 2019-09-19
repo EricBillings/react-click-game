@@ -5,10 +5,11 @@ function Image (props) {
     return (
     <div>
         <img 
-        key={props.key}
+        key={props.id}
+        id={props.id}
         src={props.image}
         alt={props.name}
-        onClick={() => {props.removeImage(props.key)}}
+        onClick={() => {props.removeImage(props.id)}}
 
         
         

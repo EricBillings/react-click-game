@@ -13,8 +13,8 @@ class App extends React.Component {
 
 
 removeImage = id => {
-const newImages = images.filter(image => image.id === !id)
-
+const newImages = this.state.images.filter(image => image.id !== id);
+console.log(newImages);
 this.setState({images: newImages});
 
 };
@@ -25,13 +25,14 @@ this.setState({images: newImages});
 render () {
   return (
     <Wrapper>
-      <Header></Header>
+      <Header />
       {this.state.images.map(image => (
       <Image  
         key={image.id}
+        id={image.id}
         name={image.name}
         image={image.image}
-        removeImage={this.removeImage}
+        removeImage={() => {this.removeImage(image.id)}}
 
       />
       ))}
